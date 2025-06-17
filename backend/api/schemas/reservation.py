@@ -9,4 +9,5 @@ class PaymentMethod(BaseModel):
 
 class Reservation(BaseModel):
     email: str = Field(..., example="hello@gmail.com")
+    name: str = Field(..., example="John Doe")
     payment_method: PaymentMethod
