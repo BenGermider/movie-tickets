@@ -4,5 +4,5 @@ from routes.seats import router as seats_router
 app = FastAPI()
 
 
-app.include_router(movies_router, prefix="/movies")
-app.include_router(seats_router, prefix="/seats")
+app.include_router(movies_router)
+app.include_router(seats_router)

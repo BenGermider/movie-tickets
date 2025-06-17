@@ -14,6 +14,5 @@ class Movie(BaseModel):
 
 
 class MovieShow(BaseModel):
-    movie_id: UUID
     seats: List[Seat]
     show_time: datetime

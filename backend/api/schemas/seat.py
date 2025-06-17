@@ -5,11 +5,13 @@ from pydantic import BaseModel
 
 
 class Seat(BaseModel):
-    show_id: UUID
     seat_label: str
+
+
+class CheckInSeat(Seat):
+    show_id: UUID
     is_free: bool
 
 
-class ReservedSeats(BaseModel):
-    movie_id: UUID
+class SeatsToReserve(BaseModel):
     seats: List[Seat]
