@@ -2,8 +2,7 @@ from typing import List
 
 from fastapi import APIRouter
 
-from backend.api.schemas.movie import Movie, MovieShow
-from backend.api.schemas.seat import Seat, CheckInSeat
+from backend.api.schemas import Movie, MovieShow, CheckInSeat
 
 router = APIRouter(prefix="/movies", tags=["movies"])
 

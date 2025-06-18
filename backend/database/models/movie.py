@@ -1,6 +1,7 @@
 from uuid import uuid4
 
 from sqlalchemy import Column, UUID, String
+from sqlalchemy.orm import relationship
 
 from backend.database.settings.base import Base
 
@@ -13,3 +14,5 @@ class Movie(Base):
     name = Column(String, nullable=False, unique=True)
     description = Column(String, nullable=False)
     image_id = Column(String, nullable=False, unique=True)
+
+    shows = relationship("Show", back_populates="movie")
