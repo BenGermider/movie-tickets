@@ -8,6 +8,7 @@ from backend.api.schemas.seat import Seat
 
 
 class Movie(BaseModel):
+    name: str
     description: str
     image_id: str
     times: List[datetime]

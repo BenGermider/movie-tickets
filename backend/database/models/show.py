@@ -2,6 +2,7 @@ import datetime
 from uuid import uuid4
 
 from sqlalchemy import UUID, Column, ForeignKey, String
+from sqlalchemy.orm import relationship
 
 from backend.database.settings.base import Base
 
@@ -14,3 +15,4 @@ class Show(Base):
     movie_id = Column(UUID(as_uuid=True), ForeignKey('movie.id'))
     time = Column(String, nullable=False)
 
+    movie = relationship("Movie", back_populates="show")

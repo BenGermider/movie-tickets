@@ -1,6 +1,8 @@
 from fastapi import FastAPI
-from routes.movies import router as movies_router
-from routes.seats import router as seats_router
+from .routes import (
+    movies_router,
+    seats_router
+)
 app = FastAPI()
 
 
